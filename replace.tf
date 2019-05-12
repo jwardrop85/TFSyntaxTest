@@ -14,7 +14,7 @@ locals {
 
 
 output "removeutfhead" {
-  value="${replace(local.dsccontent,"/\\n/","")}"
+  value="${file(data.local_file.dscfile.filename)}"
   depends_on = ["local.utfdsccontent"]
 }
 #${data.local_file.dscfile.content}
