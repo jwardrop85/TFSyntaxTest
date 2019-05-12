@@ -14,6 +14,7 @@ locals {
 
 
 output "removeutfhead" {
-  value=["local.dsccontent.utfdsccontent"]
+  value="${local.dsccontent.utfdsccontent}"
+  depends_on = ["local.utfdsccontent"]
 }
 #${data.local_file.dscfile.content}
